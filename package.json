@@ -1,0 +1,24 @@
+{
+  "name": "odi",
+  "version": "1.0.0",
+  "description": "Oath Digital India web",
+  "main": "server.js",
+  "scripts": {
+    "server": "node packages/server",
+    "frontend": "npm start --prefix packages/frontend",
+    "dev": "concurrently \"npm run server\" \"npm run frontend\" ",
+    "frontendinstall": "npm install --prefix packages/frontend"
+  },
+  "author": "Shobhit",
+  "license": "ISC",
+  "dependencies": {
+    "consola": "^2.15.3",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.7"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.1",
+    "nodemon": "^2.0.13"
+  }
+}
