@@ -4,7 +4,7 @@
   "description": "Oath Digital India web",
   "main": "server.js",
   "scripts": {
-    "server": "node packages/server",
+    "server": "nodemon packages/server",
     "frontend": "npm start --prefix packages/frontend",
     "dev": "concurrently \"npm run server\" \"npm run frontend\" ",
     "frontendinstall": "npm install --prefix packages/frontend"
@@ -15,6 +15,7 @@
     "consola": "^2.15.3",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
     "mongoose": "^6.0.7"
   },
   "devDependencies": {
