@@ -7,11 +7,14 @@
     "server": "nodemon packages/server",
     "frontend": "npm start --prefix packages/frontend",
     "dev": "concurrently \"npm run server\" \"npm run frontend\" ",
-    "frontendinstall": "npm install --prefix packages/frontend"
+    "install-all": "npm i --prefix packages/frontend && npm i",
+    "data:import": "node packages/server/utils/seedData/seeder",
+    "data:destroy": "node packages/server/utils/seedData/seeder -d"
   },
   "author": "Shobhit",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "consola": "^2.15.3",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
