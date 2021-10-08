@@ -14,7 +14,7 @@ const startServer = () => {
   const iocContainer = {
     express,
     router,
-    middlewares,
+    mw: middlewares,
   };
   const app = express();
   app.use(express.json({ limit: "50mb" }));
