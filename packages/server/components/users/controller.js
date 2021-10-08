@@ -27,7 +27,9 @@ const getUserById = async (id) => {
 };
 
 const registerUser = async ({ name, email, password, phone }) => {
-  const userExist = await User.findOne({ email });
+  let userExist = await User.findOne({ email });
+  if (userExist) throw new Error("User Already Exist");
+  userExist = await User.findOne({ phone });
   if (userExist) throw new Error("User Already Exist");
 
   const user = await User.create({
